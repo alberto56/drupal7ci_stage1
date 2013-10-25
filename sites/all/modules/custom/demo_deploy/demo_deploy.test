@@ -33,6 +33,6 @@ class demoDeployTestCase extends DrupalWebTestCase {
    */
   public function testModule() {
     $this->drupalGet('/');
-    $this->assertRaw('themes/cfforolla', 'default theme is in the html source');
+    $this->assertRaw('themes/corolla', 'default theme is in the html source');
   }
 }
