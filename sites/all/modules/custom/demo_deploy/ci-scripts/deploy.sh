@@ -11,5 +11,7 @@ drush -r $2 cc all &&
 drush -r $2 cron &&
 drush -r $2 vset maintenance_mode 0"
 
-# todo: backup the db here with something like
-# drush -r $2 sql-dump > ~/mysql-$(git log -n1 --pretty='%c').sql
+# might be interesting:
+# drush -r $2 sql-dump > ~/demo-site-backup-$(git log -n1 --pretty --format='%h').sql &&
+# tar czvf ~/demo-site-backup-$(git log -n1 --pretty --format='%h').tar.gz ~/demo-site-backup-$(git log -n1 --pretty --format='%h').sql &&
+# rm ~/demo-site-backup-$(git log -n1 --pretty --format='%h').sql &&
