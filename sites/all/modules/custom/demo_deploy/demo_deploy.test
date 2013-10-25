@@ -1,0 +1,38 @@
+<?php 
+/**
+ * @file
+ * This file contains the testing code for this module
+ */
+
+/**
+ * The test case
+ */
+class demoDeployTestCase extends DrupalWebTestCase {
+  /**
+   * Info for this test case.
+   */
+  public static function getInfo() {
+    return array(
+      'name' => t('demo: basic test'),
+      'description' => t('describe test.'),
+      'group' => 'demo',
+    );
+  }
+
+  /*
+   * Enable your module
+   */
+  public function setUp() {
+    // set up a new site with default core modules, mymodule, and
+    // dependencies.
+    parent::setUp('demo_deploy');
+  }
+
+  /*
+   * Test case for mymodule.
+   */
+  public function testModule() {
+    $this->drupalGet('/');
+    $this->assertRaw('themes/cfforolla', 'default theme is in the html source');
+  }
+}

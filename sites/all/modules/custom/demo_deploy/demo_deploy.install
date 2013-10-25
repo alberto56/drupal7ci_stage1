@@ -1,0 +1,6 @@
+<?php
+
+function demo_deploy_install() {
+  theme_enable(array('adaptivetheme', 'corolla'));
+  variable_set('theme_default', 'corolla');
+}
